@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="fr-CA" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Vendre ma maison en Estrie | Évaluation Privée | Équipe Chiasson de Francesco</title>
+    <meta name="description" content="Confiez la vente de votre propriété en Estrie à l'Équipe Chiasson de Francesco. Expertise de prestige, mise en marché exclusive et évaluation confidentielle.">
+    <meta name="keywords" content="vendre maison estrie, courtier immobilier estrie, équipe chiasson de francesco, immobilier de prestige estrie, magog, sherbrooke, orford, évaluation immobilière">
+    <meta name="author" content="Équipe Chiasson de Francesco">
+    <meta name="robots" content="index, follow">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        remaxRed: '#D91C23', /* Rouge RE/MAX légèrement plus riche */
+                        midnightBlue: '#071224', /* Bleu RE/MAX transformé en bleu nuit profond */
+                        cream: '#FAFAFA',
+                        sand: '#F3EFEA'
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        serif: ['Cormorant Garamond', 'serif'],
+                    },
+                    letterSpacing: {
+                        widest: '.25em',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
+
+    <style>
+        /* Animations fluides style "Cinematic" */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .fade-up.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .scale-in {
+            opacity: 0;
+            transform: scale(0.95);
+            transition: opacity 1.5s cubic-bezier(0.16, 1, 0.3, 1), transform 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .scale-in.is-visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* Formulaire Éditorial */
+        .editorial-input {
+            width: 100%;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 1rem 0;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+            font-size: 0.9rem;
+            transition: all 0.4s ease;
+        }
+        .editorial-input::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+        .editorial-input:focus {
+            outline: none;
+            border-bottom: 1px solid #D91C23;
+            background: rgba(255, 255, 255, 0.02);
+        }
+        
+        /* Bouton avec effet "Fill" */
+        .btn-luxury {
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            transition: color 0.4s ease;
+        }
+        .btn-luxury::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background-color: #D91C23;
+            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            z-index: -1;
+        }
+        .btn-luxury:hover::before {
+            transform: translateX(100%);
+        }
+        .btn-luxury:hover {
+            color: white;
+            border-color: #D91C23;
+        }
+    </style>
+</head>
+<body class="font-sans text-midnightBlue bg-cream antialiased selection:bg-midnightBlue selection:text-white">
+
+    <header id="navbar" class="fixed w-full top-0 z-50 transition-all duration-700 bg-transparent py-6">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 flex justify-between items-center">
+            <div class="flex flex-col">
+                <span class="font-serif text-2xl lg:text-3xl tracking-wide text-white transition-colors duration-500" id="logoText">Vendremamaison<span class="text-remaxRed font-style: italic">estrie</span>.com</span>
+            </div>
+            
+            <div class="hidden md:flex items-center space-x-10">
+                <span class="text-xs tracking-widest text-white/70 uppercase transition-colors duration-500" id="teamText">Équipe Chiasson de Francesco</span>
+                <a href="#evaluation" class="text-xs tracking-widest text-white uppercase border-b border-white/30 pb-1 hover:border-remaxRed transition-all duration-300" id="ctaText">Demander une évaluation</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="relative h-screen min-h-[800px] flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 z-0 scale-in" id="heroBg">
+                <img src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" alt="Propriété de prestige en Estrie" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-b from-midnightBlue/80 via-midnightBlue/40 to-midnightBlue/90"></div>
+            </div>
+
+            <div class="relative z-10 text-center px-6 max-w-5xl mx-auto mt-20">
+                <p class="fade-up text-remaxRed uppercase tracking-[0.4em] text-xs font-semibold mb-8">L'Art de l'Immobilier en Estrie</p>
+              <h1 class="fade-up font-serif text-5xl md:text-7xl lg:text-8xl text-white leading-[1.1] mb-8 font-light" style="transition-delay: 0.2s;">
+    Révélez la véritable valeur de <br>
+    <span class="italic text-white/80">votre propriété.</span>
+</h1>
+                <p class="fade-up text-white/70 font-light text-lg md:text-xl max-w-2xl mx-auto mb-12" style="transition-delay: 0.4s;">
+                    L'Équipe Chiasson de Francesco dévoile l'essence de votre propriété aux acheteurs les plus qualifiés, d'ici et d'ailleurs.
+                </p>
+                <div class="fade-up" style="transition-delay: 0.6s;">
+                    <a href="#evaluation" class="inline-block border border-white/50 text-white uppercase tracking-widest text-xs py-4 px-10 hover:bg-white hover:text-midnightBlue transition-all duration-500">
+                        Confier votre propriété
+                    </a>
+                </div>
+            </div>
+
+            <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center fade-up" style="transition-delay: 1s;">
+                <span class="text-white/50 text-[10px] uppercase tracking-widest mb-3">Découvrir</span>
+                <div class="w-px h-16 bg-gradient-to-b from-white/50 to-transparent"></div>
+            </div>
+        </section>
+
+        <section class="py-32 bg-cream overflow-hidden">
+            <div class="max-w-7xl mx-auto px-6 lg:px-12">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+                    
+                    <div class="lg:col-span-5 relative fade-up">
+                        <div class="aspect-[3/4] overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1600607686527-6fb886090705?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Intérieur architectural" class="w-full h-full object-cover">
+                        </div>
+                        <div class="absolute -bottom-8 -right-8 w-32 h-32 bg-remaxRed z-[-1]"></div>
+                    </div>
+
+                    <div class="lg:col-span-6 lg:col-start-7 fade-up" style="transition-delay: 0.2s;">
+                        <h2 class="font-serif text-4xl lg:text-6xl text-midnightBlue leading-tight mb-8">
+                            L'Estrie est unique.<br>
+                            <span class="italic text-gray-400">Votre courtier doit l'être aussi.</span>
+                        </h2>
+                        <div class="w-12 h-px bg-remaxRed mb-8"></div>
+                        <p class="text-gray-600 font-light leading-relaxed mb-6 text-lg">
+                            De Magog à Sherbrooke, en passant par Orford et Bromont, le marché immobilier de l'Estrie exige une finesse particulière. L'Équipe Chiasson de Francesco ne vend pas de simples maisons ; nous représentons un style de vie.
+                        </p>
+                        <p class="text-gray-600 font-light leading-relaxed mb-10">
+                            Grâce à l'envergure du réseau RE/MAX et à une mise en marché digne des plus grands magazines d'architecture, nous positionnons votre propriété devant une clientèle d'élite.
+                        </p>
+                        
+                        <div class="grid grid-cols-2 gap-8 pt-8 border-t border-gray-200">
+                            <div>
+                                <p class="font-serif text-3xl text-midnightBlue mb-2">Sur mesure</p>
+                                <p class="text-xs uppercase tracking-widest text-gray-500">Stratégie marketing</p>
+                            </div>
+                            <div>
+                                <p class="font-serif text-3xl text-midnightBlue mb-2">Exclusif</p>
+                                <p class="text-xs uppercase tracking-widest text-gray-500">Réseau d'acheteurs</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="evaluation" class="py-32 bg-sand relative">
+            <div class="max-w-5xl mx-auto px-6 lg:px-12 relative z-10">
+                <div class="bg-midnightBlue p-12 lg:p-20 shadow-2xl fade-up relative overflow-hidden">
+                    
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-remaxRed to-midnightBlue"></div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                        <div>
+                            <p class="text-remaxRed uppercase tracking-widest text-xs mb-4">Invitation</p>
+                            <h2 class="font-serif text-4xl lg:text-5xl text-white leading-tight mb-6">
+                                Demander une<br>
+                                <span class="italic text-white/70">évaluation privée.</span>
+                            </h2>
+                            <p class="text-white/60 font-light leading-relaxed text-sm">
+                                Entrez en contact avec l'Équipe Chiasson de Francesco pour obtenir une analyse précise et confidentielle de la valeur de votre propriété sur le marché actuel de l'Estrie.
+                            </p>
+                        </div>
+
+                        <form id="premiumLeadForm" class="space-y-6 flex flex-col justify-center">
+                            <div>
+                                <input type="text" id="fullName" required placeholder="Nom et prénom" class="editorial-input">
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <input type="tel" id="telephone" required placeholder="Téléphone" class="editorial-input">
+                                </div>
+                                <div>
+                                    <input type="email" id="emailAddr" required placeholder="Courriel" class="editorial-input">
+                                </div>
+                            </div>
+                            <div>
+                                <input type="text" id="propAddress" placeholder="Adresse de la propriété (Optionnel)" class="editorial-input">
+                            </div>
+                            
+                            <div class="pt-6">
+                                <button type="submit" class="w-full border border-white/30 text-white uppercase tracking-widest text-xs py-5 btn-luxury">
+                                    Soumettre ma demande
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="absolute bottom-0 right-0 w-1/3 h-2/3 bg-white/40 z-0"></div>
+        </section>
+
+    </main>
+
+    <footer class="bg-midnightBlue text-white py-20 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-16">
+                <div class="mb-8 md:mb-0">
+                    <span class="font-serif text-3xl tracking-wide">Vendremamaison<span class="text-remaxRed font-style: italic">estrie</span>.com</span>
+                    <p class="mt-4 text-white/50 font-light text-sm tracking-wide">L'Équipe Chiasson de Francesco</p>
+                </div>
+                
+                <div class="flex flex-col items-start md:items-end space-y-2">
+                    <a href="tel:+18001234567" class="font-serif text-2xl hover:text-remaxRed transition-colors duration-300">1 800 123-4567</a>
+                    <a href="mailto:contact@vendremamaisonestrie.com" class="text-white/50 hover:text-white transition-colors text-sm">contact@vendremamaisonestrie.com</a>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/10 text-xs text-white/30 tracking-widest uppercase">
+                <p>&copy; 2026 Tous droits réservés. Courtiers affiliés RE/MAX.</p>
+                <div class="space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white transition-colors">Politique de confidentialité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 1. Gestion du Header au défilement (Passage transparent -> fond solide + inversion des couleurs)
+        const navbar = document.getElementById('navbar');
+        const logoText = document.getElementById('logoText');
+        const teamText = document.getElementById('teamText');
+        const ctaText = document.getElementById('ctaText');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                navbar.classList.remove('bg-transparent', 'py-6');
+                navbar.classList.add('bg-white', 'py-4', 'shadow-md');
+                
+                logoText.classList.remove('text-white');
+                logoText.classList.add('text-midnightBlue');
+                
+                teamText.classList.remove('text-white/70');
+                teamText.classList.add('text-gray-500');
+                
+                ctaText.classList.remove('text-white', 'border-white/30');
+                ctaText.classList.add('text-midnightBlue', 'border-gray-300');
+            } else {
+                navbar.classList.add('bg-transparent', 'py-6');
+                navbar.classList.remove('bg-white', 'py-4', 'shadow-md');
+                
+                logoText.classList.add('text-white');
+                logoText.classList.remove('text-midnightBlue');
+                
+                teamText.classList.add('text-white/70');
+                teamText.classList.remove('text-gray-500');
+                
+                ctaText.classList.add('text-white', 'border-white/30');
+                ctaText.classList.remove('text-midnightBlue', 'border-gray-300');
+            }
+        });
+
+        // 2. Intersection Observer pour les animations d'apparition au scroll (fade-up)
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.15
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target); // Joue l'animation une seule fois
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-up, .scale-in').forEach((el) => {
+            observer.observe(el);
+        });
+
+        // Déclencher le background hero immédiatement
+        setTimeout(() => {
+            document.getElementById('heroBg').classList.add('is-visible');
+        }, 100);
+
+        // 3. Gestion du formulaire
+        document.getElementById('premiumLeadForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = this.querySelector('button[type="submit"]');
+            const originalText = btn.innerText;
+            
+            // Animation de chargement luxueuse (modification du texte uniquement)
+            btn.innerText = "Traitement...";
+            btn.style.pointerEvents = "none";
+            btn.style.borderColor = "#D91C23";
+            btn.style.color = "#D91C23";
+
+            setTimeout(() => {
+                alert("Votre demande d'évaluation privée a été transmise avec succès à l'Équipe Chiasson de Francesco. Nous vous contacterons en toute discrétion.");
+                this.reset();
+                btn.innerText = originalText;
+                btn.style.pointerEvents = "auto";
+                btn.style.borderColor = "rgba(255, 255, 255, 0.3)";
+                btn.style.color = "white";
+            }, 1800);
+        });
+    </script>
+</body>
+</html>
